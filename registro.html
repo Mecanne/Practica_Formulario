@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <h2>Registro de un cliente</h2>
+    <hr>
+    <p class="info">(*) Obligatorio</p>
+    <form name="formularioRegistro">
+        <label for="nombre">Nombre (*)</label>
+        <input type="text" name="nombre" id="nombreInput">
+        <span id="nombreSpan"></span>
+        <br>
+        <label for="apellido">Apellido (*)</label>
+        <input type="text" name="apellido" id="apellidoInput">
+        <span id="apellidoSpan"></span>
+        <br>
+        <label for="email">E-mail (*)</label>
+        <input type="text" name="email" id="emailInput">
+        <span id="emailSpan"></span>
+        <br>
+        <label for="trabajo">Trabajo</label>
+        <select name="trabajo" id="trabajoInput">
+            <option value="0" selected>-</option>
+            <option value="1">Analista</option>
+            <option value="1">Programador</option>
+            <option value="1">Manager</option>
+            <option value="1">Administrador</option>
+        </select>
+        <span id="trabajoSpan"></span>
+        <br>
+        <label for="jefe">Jefe</label>
+        <select name="jefe" id="jefeInput">
+            <option value="0" selected>-</option>
+            <option value="1">Analista</option>
+            <option value="1">Programador</option>
+            <option value="1">Manager</option>
+            <option value="1">Administrador</option>
+        </select>
+        <span id="jefeSpan"></span>
+        <br>
+        <label for="fechaContrato">Fecha de contrato</label>
+        <input type="date" name="fechaContrato" id="fechaContratoInput">
+        <span id="fechaContratoSpan"></span>
+        <br>
+        <label for="telefono">Telefono movil</label>
+        <input type="text" name="telefono" id="telefonoInput">
+        <span id="telefonoSpan"></span>
+        <br>
+        <label for="salario">Salario</label>
+        <input type="text" name="salario" id="salarioInput">
+        <span id="salarioSpan"></span>
+        <br>
+        <label for="contrasena">Contraseña (*)</label>
+        <input type="password" name="contrasena" id="contrasenaInput">
+        <span id="contrasenaSpan"></span>
+        <br>
+        <label for="confirmacionContrasena">Confirmacion de contraseña (*)</label>
+        <input type="password" name="confirmacionContrasena" id="confirmacionContrasenaInput">
+        <span id="confirmacionContrasenaSpan"></span>
+        <br>
+        <input type="button" name="inputButton" class="submitButton" value="Registrar">
+    </form>
+    <h2 id="mensaje"></h2>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>
