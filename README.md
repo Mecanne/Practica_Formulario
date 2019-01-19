@@ -8,3 +8,5 @@ Para la creacion de las validaciones del formulario he usado patrones para los c
 Para la creacion de las cookies he usado document.cookie implementado en unas funciones.
 
 Mientras un campo sea invalido, se mostrará el border de rojo. Si es correcto, se pondrá en verde.
+
+Link a GitHub Pages: https://mecanne.github.io/Practica_Formulario/
