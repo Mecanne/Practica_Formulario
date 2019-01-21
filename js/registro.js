@@ -205,12 +205,17 @@ const inputButton = formGroup['inputButton'];
 inputButton.addEventListener('click', () => {
     // Comprobamos todos los campos del array que almacena si los campos introducidos son validos.
     let formularioValido = false;
+    var cantidadCamposValidos = 0;
     for (var key in camposValidos) {
-        if (!camposValidos[key]) {
-            break; // Si hay algun campo en false, rompe el bucle.
+        console.log(camposValidos[key]);
+        if (camposValidos[key]) {
+            cantidadCamposValidos++;
+            // Si hay algun campo en false, rompe el bucle.
         }
-        formularioValido = true; // Si todas son true, establece la variable a true.
     }
+    
+    if(cantidadCamposValidos === 10) formularioValido = true;
+
 
     if (formularioValido) {
         // Creamos la cookie para el usuario
