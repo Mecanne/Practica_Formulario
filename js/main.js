@@ -29,3 +29,14 @@ function comprobarCookie(clave) {
     var clave = obtenerCookie(clave);
     if (clave != "") return true;
 }
+
+document.querySelector('button').addEventListener('click', function () {
+    // Creamos la cookie para el usuario
+    crearCookie("email", '', 1);
+    // Creamos la cookie de la contraseña
+    crearCookie("contraseña", '', 1);
+    // Creamos la cookie para el nombre y el apellido
+    crearCookie("nombre", '', 1);
+
+    window.location.assign("index.html");
+});

@@ -132,16 +132,16 @@ fechaInput.addEventListener("change", () => {
     if (fecha.getTime() - fechaMinima.getTime() < 0) {
         fechaInput.style.border = "1px solid red";
         document.getElementById("fechaContratoSpan").innerHTML = "Debes escoger una fecha mayor al 1 de Enero del 2000.";
-        camposValidos['fecha'] = false;
+        camposValidos['fechaContrato'] = false;
     }// Si la fecha es mayor al dia en el que estamos, dará error también.
     else if ((fecha.getTime() - fechaMañana.getTime()) >= 0) {
         fechaInput.style.border = "1px solid red";
         document.getElementById("fechaContratoSpan").innerHTML = "Debes escoger una fecha menor al dia actual.";
-        camposValidos['fecha'] = false;
+        camposValidos['fechaContrato'] = false;
     } else {
         fechaInput.style.border = "1px solid green";
         document.getElementById("fechaContratoSpan").innerHTML = "";
-        camposValidos['fecha'] = true;
+        camposValidos['fechaContrato'] = true;
     }
 
 });
@@ -170,7 +170,7 @@ salarioInput.addEventListener('keyup', () => {
     } else {
         salarioInput.style.border = "1px solid green";
         document.getElementById("salarioSpan").innerHTML = "";
-        camposValidos['salrario'] = true;
+        camposValidos['salario'] = true;
     }
 });
 
@@ -208,11 +208,13 @@ inputButton.addEventListener('click', () => {
     var cantidadCamposValidos = 0;
     for (var key in camposValidos) {
         console.log(camposValidos[key]);
+        console.log(key);
         if (camposValidos[key]) {
             cantidadCamposValidos++;
             // Si hay algun campo en false, rompe el bucle.
         }
     }
+    console.log(cantidadCamposValidos);
     
     if(cantidadCamposValidos === 10) formularioValido = true;
 
@@ -234,6 +236,7 @@ inputButton.addEventListener('click', () => {
         });
         document.querySelector("form").appendChild(botonLogin);
         document.getElementById("mensaje").innerHTML = "USUARIO REGISTRADO CORRECTAMENTE";
+        document.querySelector('input[type="button"]').remove();
     } else {
         console.log("Formulario invalido");
     }

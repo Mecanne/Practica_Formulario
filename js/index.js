@@ -5,7 +5,7 @@ botonLogin.addEventListener("click", () => {
     if(obtenerCookie("email") === email && obtenerCookie("contraseña") === contraseña){
         window.location.assign("main.html");
     }else{
-        document.getElementById("mensaje").innerHTML = "Usuario o conotraseña incorrectos";
+        document.getElementById("mensaje").innerHTML = "Usuario o contraseña incorrectos";
     }
 });
 
